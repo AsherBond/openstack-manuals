@@ -144,6 +144,12 @@ A
       The protocol by which layer-3 IP addresses are resolved into
       layer-2 link local addresses.
 
+   admin (Role)
+
+      A role that grants highest privileges in an OpenStack deployment.
+      In many cases, admin rights can imply broader system access, depending on
+      deployment policies.
+
    admin API
 
       A subset of API calls that are accessible to authorized
@@ -183,6 +189,10 @@ A
       The process of taking a floating IP address from the address
       pool so it can be associated with a fixed IP on a guest VM
       instance.
+
+   AlmaLinux
+
+      A free, open-source RHEL-compatible Linux distribution.
 
    Amazon Kernel Image (AKI)
 
@@ -382,9 +392,11 @@ A
 
    availability zone
 
-      An Amazon EC2 concept of an isolated area that is used for fault
-      tolerance. Do not confuse with an OpenStack Compute zone or
-      cell.
+     An Availability Zone (AZ) is a logical subdivision of cloud storage,
+     compute and network services. It provides a way for cloud operators
+     to logically segment their compute based on arbitrary factors like
+     location (country, data center, rack), network layout and/or power
+     source.
 
    AWS CloudFormation template
 
@@ -794,31 +806,10 @@ C
       retrieves from the metadata service, such as the SSH public key and
       user data.
 
-   cloudadmin
-
-      One of the default roles in the Compute RBAC system. Grants
-      complete system access.
-
    Cloudbase-Init
 
       A Windows project providing guest initialization features,
       similar to cloud-init.
-
-   cloudpipe
-
-      A compute service that creates VPNs on a per-project
-      basis.
-
-   cloudpipe image
-
-      A pre-made VM image that serves as a cloudpipe server.
-      Essentially, OpenVPN running on Linux.
-
-   Clustering service (senlin)
-
-      The project that implements clustering services and libraries
-      for the management of groups of homogeneous objects exposed
-      by other OpenStack services.
 
    command filter
 
@@ -1161,11 +1152,6 @@ D
       that users access to receive a desktop experience from
       any location. This may provide general use, development, or
       even homogeneous testing environments.
-
-   developer
-
-      One of the default roles in the Compute RBAC system and the
-      default role assigned to a new user.
 
    device ID
 
@@ -1653,6 +1639,14 @@ G
       An IP address, typically assigned to a router, that
       passes network traffic between different networks.
 
+   generic network virtualization encapsulation (Geneve)
+
+      A flexible network protocol that adapts to the changing needs
+      and capabilities of devices in virtualized networks. It provides
+      a tunneling framework without being prescriptive, supporting
+      evolving network requirements. Geneve is predominantly used for
+      OVN projects networks.
+
    generic receive offload (GRO)
 
       Feature of certain network interface drivers that
@@ -1829,10 +1823,6 @@ H
       A mix of on-premises, private cloud and third-party,
       public cloud services with orchestration between the two
       platforms.
-
-   Hyper-V
-
-      One of the hypervisors supported by OpenStack.
 
    hyperlink
 
@@ -2158,11 +2148,6 @@ I
       One of the VM image disk formats supported by Image
       service.
 
-   itsec
-
-      A default role in the Compute RBAC system that can quarantine an
-      instance in any project.
-
 J
 ~
 
@@ -2305,6 +2290,9 @@ L
       Enables a Linux bridge to understand a Networking port,
       interface attachment, and other abstractions.
 
+      This driver was removed in the 2025.1 (Epoxy) release of
+      OpenStack, it is recommended to migrate to the OVN driver.
+
    Linux containers (LXC)
 
       An OpenStack-supported hypervisor.
@@ -2367,6 +2355,14 @@ M
       Logical groupings of related code, such as the Block Storage
       volume manager or network manager.
 
+   manager (Role)
+
+      A role positioned between the admin and member roles, providing
+      limited identity management. It has a narrower scope and purpose,
+      focused on managing identity-related resources. When assigned at the
+      domain scope, the manager role allows users to manage users,
+      projects, groups, and role assignments within an entire domain.
+
    manifest
 
       Used to track segments of a large object within Object
@@ -2403,6 +2399,12 @@ M
 
       Project name for OpenStack Network Information Service. To be
       merged with Networking.
+
+   member (Role)
+
+      A role that provides intermediate privileges between the admin and reader
+      roles. The member role offers a way to introduce more granular access
+      control and flexibility across different scopes.
 
    membership
 
@@ -2530,11 +2532,6 @@ M
       Facility in Compute that allows each virtual machine instance to
       have more than one VIF connected to it.
 
-   murano
-
-      Codename for the :term:`Application Catalog service <Application Catalog
-      service (murano)>`.
-
 N
 ~
 
@@ -2544,12 +2541,6 @@ N
 
       Released as open source by NASA in 2010 and is the basis for
       Compute.
-
-   netadmin
-
-      One of the default roles in the Compute RBAC system. Enables the
-      user to allocate publicly accessible IP addresses to instances and
-      change firewall rules.
 
    NetApp volume driver
 
@@ -2718,12 +2709,6 @@ N
 
       Alternative term for the :term:`Compute API <Compute API (nova API)>`.
 
-   nova-network
-
-      A Compute component that manages IP address allocation,
-      firewalls, and other network-related tasks. This is the legacy
-      networking option and an alternative to Networking.
-
 O
 ~
 
@@ -2804,6 +2789,14 @@ O
 
       A standardized interface for managing compute, data, and network
       resources, currently unsupported in OpenStack.
+
+   Open Virtual Network (OVN)
+
+      OVN (Open Virtual Network) is a set of services that convert
+      virtual network setups into OpenFlow rules, and apply them into
+      Open vSwitch. OVN provides a more abstract layer than Open vSwitch,
+      allowing working with logical routers and logical switches, instead of
+      flows.
 
    Open Virtualization Format (OVF)
 
@@ -2913,20 +2906,17 @@ O
       In the context of Object Storage, this is a process that is not
       terminated after an upgrade, restart, or reload of the service.
 
-   Oslo
+   oslo
 
       Codename for the :term:`Common Libraries project <Common Libraries
-      (oslo)>`.
+      (oslo)>`. It's a collection of tools and libraries that help
+      OpenStack services share common features like logging, configuration,
+      and messaging.
 
 P
 ~
 
 .. glossary::
-
-   panko
-
-      Part of the OpenStack :term:`Telemetry service <Telemetry
-      service (telemetry)>`; provides event storage.
 
    parent cell
 
@@ -3248,6 +3238,15 @@ R
       One of the VM image disk formats supported by Image service; an
       unstructured disk image.
 
+   reader (Role)
+
+      A role that grants read-only access to resources within a specific
+      scope — system, domain, or project. The behavior of the reader role
+      depends on its assigned scope. For example, a system-level reader
+      can view all projects in the deployment, while a domain-level reader
+      can only view projects within their domain. This scope-based distinction
+      affects how APIs behave for different users with the reader role.
+
    rebalance
 
       The process of distributing Object Storage partitions across all
@@ -3295,11 +3294,16 @@ R
 
       A recommended architecture for an OpenStack cloud.
 
-   region
+   Region
 
-      A discrete OpenStack environment with dedicated API endpoints
-      that typically shares only the Identity (keystone) with other
-      regions.
+      A region in OpenStack represents a complete OpenStack
+      cluster that has a dedicated control plane and set
+      of API endpoints. It is common for operators
+      of large clouds to offer their users several OpenStack
+      regions, which differ by their geographical
+      location or purpose. In order to easily navigate
+      in a multi-region environment, cloud users need
+      a way to distinguish clusters by their names.
 
    registry
 
@@ -3383,6 +3387,10 @@ R
       OpenStack summit took place in Vancouver, Canada. The release
       is named after the Rocky Mountains.
 
+   Rocky Linux
+
+      A Linux distribution that is compatible with OpenStack.
+
    role
 
       A personality that a user assumes to perform a specific set of
@@ -3450,11 +3458,6 @@ S
 
 .. glossary::
 
-   sahara
-
-      Codename for the :term:`Data Processing service<Data Processing
-      service (sahara)>`.
-
    SAML assertion
 
       Contains information about a user as provided by the identity
@@ -3473,8 +3476,12 @@ S
 
    scoped token
 
-      An Identity service API access token that is associated with a
-      specific project.
+      An Identity service API access token that is associated
+      with a single scope of operation. This token provides
+      access based on defined scopes, which can vary depending
+      on the level of access required. Scopes can include
+      system-level access, domain-level access, or
+      project-specific access.
 
    scrubber
 
@@ -3519,11 +3526,6 @@ S
       Linux kernel security module that provides the mechanism for
       supporting access control policies.
 
-   senlin
-
-      Code name for the :term:`Clustering service
-      <Clustering service (senlin)>`.
-
    server
 
       Computer that provides explicit services to the client software
@@ -3545,6 +3547,16 @@ S
       An OpenStack service, such as Compute, Object Storage, or Image
       service. Provides one or more endpoints through which users can access
       resources and perform operations.
+
+   service (Role)
+
+      A role reserved for service-to-service communication. It allows one
+      service to interact with another and be granted only the necessary
+      elevated privileges by the receiving service. The service role was
+      introduced to replace the previous practice of assigning the overly
+      privileged admin role to service users. With this role,
+      service-to-service APIs can now default to using the service role,
+      ensuring more secure and limited access tailored to inter-service needs.
 
    service catalog
 
@@ -3684,10 +3696,11 @@ S
       virtual device. Currently supported in OpenStack Havana and later
       releases.
 
-   SmokeStack
+   Skyline
 
-      Runs automated tests against the core OpenStack API; written in
-      Rails.
+      An OpenStack dashboard with optimized modern user interface (UI) and
+      user experience (UX). It offers an improved performance, supporting
+      higher concurrency compared to previous dashboard solutions.
 
    snapshot
 
@@ -3854,12 +3867,6 @@ S
       Point in time since the last container and accounts database
       sync among nodes within Object Storage.
 
-   sysadmin
-
-      One of the default roles in the Compute RBAC system. Enables a
-      user to add other users to a project, interact with VM images that are
-      associated with the project, and start and stop VM instances.
-
    system usage
 
       A Compute component that, along with the notification system,
@@ -3980,11 +3987,6 @@ T
    transient queue
 
       Alternative term for a non-durable queue.
-
-   TripleO
-
-      OpenStack-on-OpenStack program. The code name for the
-      OpenStack Deployment program.
 
    trove
 
@@ -4135,10 +4137,6 @@ V
    virtual VLAN
 
       Alternative term for a virtual network.
-
-   VirtualBox
-
-      An OpenStack-supported hypervisor.
 
    Vitrage
 
@@ -4294,34 +4292,10 @@ X
       attributes as well depending upon the version. The most recent
       and standard version of X.509 is v3.
 
-   Xen
-
-      Xen is a hypervisor using a microkernel design, providing
-      services that allow multiple computer operating systems to
-      execute on the same computer hardware concurrently.
-
-   Xen API
-
-      The Xen administrative API, which is supported by
-      Compute.
-
-   Xen Cloud Platform (XCP)
-
-      An OpenStack-supported hypervisor.
-
-   Xen Storage Manager Volume Driver
-
-      A Block Storage volume plug-in that enables communication with
-      the Xen Storage Manager API.
-
    Xena
 
       The code name for the twenty fourth release of OpenStack.
       The release is named after a fictional warrior princess.
-
-   XenServer
-
-      An OpenStack-supported hypervisor.
 
    XFS
 
