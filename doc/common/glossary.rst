@@ -209,6 +209,12 @@ A
       Both a VM container format and disk format. Supported by Image
       service.
 
+   Ansible
+
+      Ansible is an open-source automation tool that can be used to deploy,
+      configure, and manage OpenStack environments using simple, repeatable
+      playbooks.
+
    aodh
 
       Part of the OpenStack :term:`Telemetry service <Telemetry
@@ -2878,9 +2884,12 @@ O
       2023.1 Antelope. Followed by, respectively, 2023.2 Bobcat,
       2024.1 Caracal, 2024.2 Dalmatian, 2025.1 Epoxy, 2025.2 Flamingo.
 
-   openSUSE
+   OpenStack-Ansible
 
-      A Linux distribution that is compatible with OpenStack.
+      OpenStack-Ansible (OSA) provides Ansible playbooks and
+      roles for deploying and configuring an OpenStack
+      environment, enabling scalable and automated cloud
+      infrastructure management.
 
    operator
 
@@ -3823,10 +3832,6 @@ S
    subnet
 
       Logical subdivision of an IP network.
-
-   SUSE Linux Enterprise Server (SLES)
-
-      A Linux distribution that is compatible with OpenStack.
 
    suspend
 
