@@ -126,6 +126,7 @@ Here are a few representative files under ``www/``:
   * ``dropdown_languages.tmpl``
   * ``footer.tmpl``
   * ``google_analytics.tmpl``
+  * ``glossary.tmpl``
   * ``header.tmpl``
   * ``indexbase.tmpl``
   * ``navigation.tmpl``

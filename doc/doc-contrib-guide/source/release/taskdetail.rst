@@ -89,6 +89,11 @@ Make the following changes in the **openstack-manuals** repository:
 
       $ cp -a www/RELEASE www/NEXT_SERIES
 
+   .. note::
+
+      Don't forget to update the release name in release notes link in
+      **www/NEXT_SERIES/index.html** file.
+
 #. Update the ``SERIES_INFO`` data structure at the top of the source
    file for the template generator (``tools/www-generator.py``). See
    :ref:`template-generator` for details about the structure.
