@@ -32,9 +32,9 @@ following steps toward deployment using a production architecture:
   to automate deployment and management of the production environment.
   The OpenStack project has a couple of deployment projects with
   specific guides per version:
+  - `2026.1 (Gazpacho) release <https://docs.openstack.org/2026.1/deploy/>`_
   - `2025.2 (Flamingo) release <https://docs.openstack.org/2025.2/deploy/>`_
   - `2025.1 (Epoxy) release <https://docs.openstack.org/2025.1/deploy/>`_
-  - `2024.2 (Dalmatian) release <https://docs.openstack.org/2024.2/deploy/>`_
 
 .. _overview-example-architectures:
 
