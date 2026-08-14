@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Common documents\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-19 23:47+0000\n"
+"POT-Creation-Date: 2026-07-16 13:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2272,9 +2272,6 @@ msgid ""
 msgstr ""
 "Кодовое имя :term:`службы баз данных <Database service (trove)>` OpenStack."
 
-msgid "Codename for OpenStack :term:`Monitoring <Monitoring (monasca)>`."
-msgstr "Кодовое имя :term:`мониторинга <Monitoring (monasca)>` OpenStack."
-
 msgid ""
 "Codename for OpenStack :term:`Object Storage service<Object Storage service "
 "(swift)>`."
@@ -3445,9 +3442,6 @@ msgstr "Монитор (LBaaS)"
 
 msgid "Monitor (Mon)"
 msgstr "Monitor (Mon)"
-
-msgid "Monitoring (monasca)"
-msgstr "Мониторинг (Monasca)"
 
 msgid "N"
 msgstr "N"
@@ -6249,9 +6243,6 @@ msgstr "миграция"
 msgid "mistral"
 msgstr "Mistral"
 
-msgid "monasca"
-msgstr "Monasca"
-
 msgid "multi-factor authentication"
 msgstr "многофакторная аутентификация"
 
@@ -6623,9 +6614,6 @@ msgstr "снимок"
 
 msgid "soft reboot"
 msgstr "горячая перезагрузка"
-
-msgid "solum"
-msgstr "Solum"
 
 msgid "spread-first scheduler"
 msgstr "простой планировщик"
