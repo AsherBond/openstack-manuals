@@ -1,28 +1,13 @@
-# The order of packages is significant, because pip processes them in the order
-# of appearance. Changing the order has an impact on the overall integration
-# process, which may cause wedges in the gate later.
-pbr>=2.0 # Apache-2.0
-
-# Hacking already pins down pep8, pyflakes and flake8
-hacking>=8.0,<8.1.0 # Apache-2.0
-
+Babel>=2.3.4,!=2.4.0  # BSD
 beautifulsoup4 # MIT
 Jinja2>=2.8 # BSD License (3 clause)
-openstack-doc-tools>=2.0.0 # Apache-2.0
-sphinx>=2.0.0,!=2.1.0 # BSD
-openstackdocstheme>=2.2.0 # Apache-2.0
-doc8 # Apache-2.0
-requests>=2.14.2  # Apache-2.0
-lxml>=2.3,!=3.7.0  # BSD
-PyYAML>=3.10.0  # MIT
 jsonschema>=3.2.0
-os-service-types
+lxml>=2.3,!=3.7.0  # BSD
+openstackdocstheme>=2.2.0 # Apache-2.0
+openstack-doc-tools>=2.0.0 # Apache-2.0
 openstack-governance>=0.1.0
+os-service-types
 percache>=0.3.0
-
-# For translations
-# Babel 2.4.0 is broken, fixed in 2.4.1
-Babel>=2.3.4,!=2.4.0  # BSD
-
-# For testing htaccess file contents
-whereto>=0.5.0  # Apache-2.0
+PyYAML>=3.10.0  # MIT
+requests>=2.14.2  # Apache-2.0
+sphinx>=2.0.0,!=2.1.0 # BSD
